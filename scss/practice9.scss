@@ -1,0 +1,199 @@
+@import "reset";
+@import "media";
+@import "grid";
+
+$primary: #009688;
+$bg: #f1f1f1;
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    color: #666666;
+}
+.container {
+    max-width: 1500px;
+    margin: auto;
+    padding: 20px 15px;
+    @include rs-sm{
+        display: flex;
+        justify-content: space-between;
+        .profile{
+            width: 40%;
+            margin-right: 15px;
+        }
+        .story{
+            width: 60%;
+        }
+    }
+}
+.profile {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.205), 0 4px 20px 0 rgba(0, 0, 0, 0.219);
+    height: 100%;
+    .avt {
+        width: 100%;
+        height: 320px;
+        position: relative;
+        background: url(https://www.w3schools.com/w3images/avatar_hat.jpg) no-repeat top center/cover;
+        h2 {
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+            font-size: 26px;
+            font-weight: normal;
+        }
+    }
+    .info {
+        border-bottom: 1px solid rgba(216, 207, 207, 0.137);
+        padding: 20px 30px;
+        ul {
+            li {
+                margin: 10px 0px;
+                span {
+                    color: black;
+                    font-weight: normal;
+                    i {
+                        margin-right: 16px;
+                        color: $primary;
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .skills {
+        padding: 30px;
+        .skill {
+            h2 {
+                font-weight: 500;
+            }
+            i {
+                color: $primary;
+                margin-right: 16px;
+                display: inline-block;
+            }
+        }
+        ul {
+            li {
+                h3 {
+                    font-weight: normal;
+                    font-size: 16px;
+                    margin: 10px 0px;
+                }
+            }
+        }
+    }
+    .languages {
+        padding: 30px;
+        padding-bottom: 20px;
+        .lang {
+            h2 {
+                font-weight: 500;
+            }
+            i {
+                color: $primary;
+                margin-right: 16px;
+                display: inline-block;
+            }
+        }
+        ul {
+            li {
+                h3 {
+                    font-weight: normal;
+                    font-size: 16px;
+                    margin: 10px 0px;
+                }
+            }
+        }
+    }
+}
+.loading {
+    width: 100%;
+    height: 18px;
+    background-color: $bg;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 12px;
+    .complete {
+        background-color: $primary;
+        border-radius: 8px;
+        height: 100%;
+        color: white;
+        &::before {
+            content: "";
+        }
+    }
+}
+
+.story {
+    .work-experience {
+        padding: 30px;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.205), 0px 4px 20px 0px rgba(0, 0, 0, 0.219);
+        margin-bottom: 20px;
+        .title {
+            font-size: 28px;
+            padding-bottom: 20px;
+            i {
+                color: $primary;
+                margin-right: 10px;
+                font-size: 40px;
+            }
+        }
+        .content {
+            border-bottom: 1px solid $bg;
+            padding: 20px 0px;
+            h3 {
+                font-weight: 500;
+                font-size: 16px;
+                margin: 5px 0px;
+            }
+            .days {
+                color: $primary;
+                font-size: 16px;
+                padding: 8px 0px;
+                i {
+                    color: $primary;
+                    margin-right: 10px;
+                }
+                span {
+                    color: white;
+                    background: $primary;
+                    padding: 3px 5px;
+                    border-radius: 5px;
+                    display: inline-block;
+                }
+            }
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.copyright {
+    background-color: $primary;
+    padding: 20px;
+    text-align: center;
+    h3 {
+        color: white;
+        font-size: 18px;
+        font-weight: normal;
+        a {
+            color: white;  
+            text-decoration: underline;
+        }
+    }
+    ul {
+        li {
+            padding: 15px 0px;
+            display: inline-block;
+            i {
+                color: white;
+                font-size: 18px;
+                &:hover{
+                    color: rgba(255, 255, 255, 0.534) ;
+                }
+            }
+        }
+    }
+}
